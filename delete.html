@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Data Deletion Request — Arctic Catcher (DULAB TOV)</title>
+  <meta name="description" content="Request deletion of data related to Arctic Catcher by DULAB TOV." />
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #121824;
+      --text: #e8eef7;
+      --muted: #a7b2c3;
+      --border: rgba(255,255,255,.08);
+      --accent: #4cc9ff;
+      --accent2: #7cff6b;
+      --danger: #ff5b6b;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: radial-gradient(1200px 800px at 20% 0%, rgba(76,201,255,.12), transparent 55%),
+                  radial-gradient(900px 700px at 80% 20%, rgba(124,255,107,.10), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 16px 64px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      padding: 16px;
+    }
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    .section {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(0,0,0,.18);
+    }
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+    .section p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .section ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .pill {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 8px;
+      user-select: none;
+    }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent2);
+      box-shadow: 0 0 0 3px rgba(124,255,107,.12);
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    label {
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      outline: none;
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 14px;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 520px) {
+      .row { grid-template-columns: 1fr; }
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: 4px;
+    }
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 14px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+      color: #061018;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+    }
+    button:active { transform: translateY(1px); }
+    .hint {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .note {
+      padding: 14px 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      background: rgba(0,0,0,.20);
+    }
+
+    .kbd {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="title">Data Deletion Request</div>
+        <div class="subtitle"><strong>Arctic Catcher</strong> — by <strong>DULAB TOV</strong></div>
+      </div>
+      <div class="pill" title="This page is for Google Play compliance and user transparency">
+        <span class="dot"></span>
+        OAuth sign-in supported
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="grid">
+        <!-- Left: Explanation -->
+        <div class="section">
+          <h2>What data does Arctic Catcher collect?</h2>
+          <p>
+            Arctic Catcher does not require users to create an in-app account. Sign-in can be performed via OAuth
+            (e.g., Google Play Games / Google Sign-In) strictly to identify a player session and enable basic game features.
+          </p>
+          <p>
+            We do <strong>not</strong> collect sensitive personal data (such as phone numbers or passwords). Any OAuth tokens
+            are handled by the provider and are not stored as user passwords by DULAB TOV.
+          </p>
+
+          <h2 style="margin-top:16px;">When would deletion be needed?</h2>
+          <p>
+            Even if the app stores little to no personal data, you can still request deletion of any data that may exist
+            (for example: a player identifier, game progress stored on a backend, or support communications).
+          </p>
+
+          <ul>
+            <li><strong>Typical OAuth-related identifiers:</strong> provider user ID / player ID</li>
+            <li><strong>Typical game data (if enabled):</strong> progress, achievements, cloud saves</li>
+            <li><strong>Support requests (if sent):</strong> message content you submit</li>
+          </ul>
+
+          <div class="pill" style="margin-top:14px;">
+            Tip: you can find your Player ID in the app’s settings (if shown) or attach a screenshot.
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="section">
+          <h2>Request deletion</h2>
+          <p>
+            Fill out the form below. After submission, we will verify the request and remove any associated data.
+          </p>
+
+          <form id="deleteForm">
+            <div class="row">
+              <label>
+                Email (for contacting you)
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+
+              <label>
+                OAuth Provider
+                <select name="provider" required>
+                  <option value="" disabled selected>Select provider</option>
+                  <option value="google_play_games">Google Play Games</option>
+                  <option value="google_signin">Google Sign-In</option>
+                  <option value="other">Other</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Player ID / User ID (if you have it)
+              <input type="text" name="user_id" placeholder="e.g., GPG Player ID" />
+            </label>
+
+            <label>
+              What should be deleted?
+              <textarea name="details" placeholder="Example: Delete any game progress and identifiers linked to my account."></textarea>
+            </label>
+
+            <label style="display:flex; gap:10px; align-items:flex-start;">
+              <input type="checkbox" name="confirm" required style="width:auto; margin-top:3px;" />
+              <span style="color:var(--muted); font-size:13px;">
+                I confirm I’m requesting deletion for my own account/data and understand we may ask for verification.
+              </span>
+            </label>
+
+            <div class="actions">
+              <button type="submit">Submit Deletion Request</button>
+              <div class="hint">
+                This is a placeholder button right now (wire it later).<br />
+                Suggested endpoint: <span class="kbd">POST /api/delete-request</span>
+              </div>
+            </div>
+          </form>
+
+          <div id="msg" class="pill" style="display:none; margin-top:12px;">
+            ✅ Request captured locally (demo). No network call was made.
+          </div>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>Note:</strong> This page can be used as the “Data deletion” link in Google Play Console.
+        If you later add a backend, connect the form submit to your API (e.g. <span class="kbd">POST /api/delete-request</span>)
+        and document your deletion timeline (e.g. 7–30 days).
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('deleteForm');
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      msg.style.display = 'inline-flex';
+      setTimeout(() => (msg.style.display = 'none'), 6000);
+      form.reset();
+    });
+  </script>
+</body>
+</html>
